@@ -80,12 +80,12 @@
                     @enderror
                 </div>
 
-                <div class="login-options">
+                <!-- <div class="login-options">
                     <label>
                         <input type="checkbox" name="remember">
                         <span>Remember me</span>
                     </label>
-                </div>
+                </div> -->
 
                 <button type="submit" class="login-button">
                     <span>Sign In</span>
