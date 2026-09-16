@@ -1,0 +1,1283 @@
+/* =========================================================
+   CUSTOM ADMIN THEME
+   NAVY BLUE + RED
+========================================================= */
+
+:root {
+    --navy: #0b1f3a;
+    --navy-dark: #07152a;
+    --navy-medium: #102b4d;
+    --navy-light: #173b69;
+
+    --blue: #2563eb;
+    --blue-soft: #eff6ff;
+
+    --red: #e11d2e;
+    --red-dark: #b91c1c;
+    --red-soft: #fff1f2;
+
+    --background: #f4f7fb;
+    --card: #ffffff;
+
+    --text: #1e293b;
+    --text-light: #64748b;
+    --text-muted: #94a3b8;
+
+    --border: #e2e8f0;
+
+    --shadow-sm:
+        0 4px 12px rgba(7, 21, 42, 0.06);
+
+    --shadow-md:
+        0 10px 30px rgba(7, 21, 42, 0.08);
+
+    --shadow-lg:
+        0 18px 45px rgba(7, 21, 42, 0.12);
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 90% 0%,
+            rgba(37, 99, 235, 0.06),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(225, 29, 46, 0.035),
+            transparent 25%
+        ),
+        var(--background);
+
+    color: var(--text);
+
+    font-family: "Nunito", sans-serif;
+}
+
+#wrapper {
+    min-height: 100vh;
+}
+
+#content-wrapper {
+    background: transparent !important;
+}
+
+#content {
+    min-height: calc(100vh - 150px);
+}
+
+
+/* =========================================================
+   REMOVE RUANG ADMIN PURPLE
+========================================================= */
+
+.text-primary {
+    color: var(--navy) !important;
+}
+
+a.text-primary {
+    color: var(--navy) !important;
+}
+
+.text-info {
+    color: var(--blue) !important;
+}
+
+.bg-primary {
+    background-color: var(--navy) !important;
+    background-image: none !important;
+}
+
+.border-primary {
+    border-color: var(--navy) !important;
+}
+
+/* =========================================================
+   SIDEBAR
+   Navy + Red Theme
+========================================================= */
+
+.sidebar {
+    background-color: var(--navy) !important;
+}
+
+
+/* =========================================================
+   SIDEBAR BRAND
+========================================================= */
+
+.sidebar .sidebar-brand {
+    background-color: var(--navy) !important;
+
+    color: #ffffff !important;
+}
+
+
+.sidebar .sidebar-brand-icon {
+    background-color: #ffffff !important;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.sidebar .sidebar-brand-icon img {
+    width: 38px;
+    height: 34px;
+
+    object-fit: contain;
+
+    transition: all 0.3s ease;
+}
+
+
+.sidebar .sidebar-brand-text {
+    color: #ffffff !important;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.sidebar .sidebar-divider {
+    border-top:
+        1px solid rgba(159, 159, 159, 0.35) !important;
+}
+
+
+/* =========================================================
+   SIDEBAR HEADING
+========================================================= */
+
+.sidebar .sidebar-heading {
+    color:
+        rgba(238, 249, 255, 0.45) !important;
+
+    font-size: 0.75rem;
+
+    text-transform: uppercase;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   NAV ITEMS
+========================================================= */
+
+.sidebar .nav-item .nav-link {
+    color: #eef9ff !important;
+
+    background-color: transparent !important;
+
+    transition:
+        background-color 5.2s ease,
+        color 0.2s ease;
+}
+
+
+.sidebar .nav-item .nav-link i {
+    color:
+        rgba(238, 249, 255, 0.45) !important;
+
+    transition: color 0.2s ease;
+}
+
+
+/* =========================================================
+   NAV HOVER
+========================================================= */
+
+.sidebar .nav-item .nav-link:hover {
+    color: #ffffff !important;
+
+    background-color:
+        rgba(255, 255, 255, 0.06) !important;
+}
+
+
+.sidebar .nav-item .nav-link:hover i {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   ACTIVE NAV ITEM
+========================================================= */
+
+.sidebar .nav-item.active .nav-link {
+    color: #ffffff !important;
+
+    font-weight: 700;
+
+    background-color:
+        rgba(225, 29, 46, 0.15) !important;
+
+    border-left:
+        3px solid var(--red);
+}
+
+
+.sidebar .nav-item.active .nav-link i {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   COLLAPSE MENU
+========================================================= */
+
+.sidebar .collapse-inner {
+    background-color: #ffffff !important;
+
+    border-radius: 0.35rem;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.10);
+    
+        margin: 1rem 0 !important;
+}
+
+
+/* =========================================================
+   COLLAPSE HEADER
+========================================================= */
+
+.sidebar .collapse-header {
+    color: var(--red) !important;
+
+    font-size: 0.70rem !important;
+
+    font-weight: 800 !important;
+
+    text-transform: uppercase;
+
+    padding:
+        0.5rem 1rem;
+
+}
+
+
+/* =========================================================
+   COLLAPSE ITEM
+========================================================= */
+
+.sidebar .collapse-item {
+    color: var(--navy) !important;
+
+    background-color: transparent !important;
+
+    padding:
+        0.5rem 1rem;
+
+    margin:
+        0 0.5rem;
+
+    border-radius:
+        0.35rem;
+
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Hover */
+
+.sidebar .collapse-item:hover {
+    background-color:
+        rgba(11, 31, 58, 0.08) !important;
+
+    color: var(--navy) !important;
+
+    text-decoration: none;
+}
+
+
+/* Active */
+
+.sidebar .collapse-item.active {
+    background-color:
+        var(--navy) !important;
+
+    color: #ffffff !important;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   COLLAPSE ARROW - NORMAL
+========================================================= */
+
+.sidebar .nav-link[data-toggle="collapse"]::after {
+    color:
+        rgba(238, 249, 255, 0.5) !important;
+}
+
+
+.sidebar .nav-link[data-toggle="collapse"]:hover::after {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   SIDEBAR TOGGLER
+========================================================= */
+
+#sidebarToggle {
+    background-color:
+        #eef9ff !important;
+
+    height: 28px !important;
+
+    width: 40px !important;
+
+    transition:
+        background-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+#sidebarToggle:hover {
+    background-color:
+        var(--red) !important;
+
+    opacity: 0.9;
+}
+
+
+#sidebarToggle::after {
+    color:
+        var(--navy) !important;
+}
+
+
+#sidebarToggle:hover::after {
+    color:
+        #ffffff !important;
+}
+
+
+/* =========================================================
+   SIDEBAR COLLAPSED
+========================================================= */
+
+.sidebar.toggled {
+    width: 110px !important;
+}
+
+
+/* =========================================================
+   BRAND - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .sidebar-brand {
+    width: 110px !important;
+
+    height: 74px;
+
+    padding: 10px;
+
+    justify-content: center !important;
+}
+
+
+.sidebar.toggled .sidebar-brand-icon {
+    width: 44px;
+    height: 44px;
+
+    margin: 0 !important;
+}
+
+
+.sidebar.toggled .sidebar-brand-icon img {
+    width: 35px;
+    height: 31px;
+}
+
+
+/* Hide Administrator Page */
+
+.sidebar.toggled .sidebar-brand-text {
+    display: none !important;
+}
+
+
+/* =========================================================
+   HEADING - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .sidebar-heading {
+    display: none !important;
+}
+
+
+/* =========================================================
+   NAV ITEM - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .nav-item {
+    margin: 0 !important;
+
+    width: 100%;
+}
+
+
+/* Icon + Text menjadi vertikal */
+
+.sidebar.toggled .nav-item .nav-link {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    text-align: center !important;
+
+    padding:
+        14px 5px !important;
+
+    min-height: 72px;
+
+    border-left: none !important;
+
+    border-radius: 0 !important;
+
+    background-color: transparent !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   ICON - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .nav-item .nav-link i {
+    width: auto !important;
+
+    margin:
+        0 0 7px 0 !important;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   TEXT - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .nav-item .nav-link span {
+    display: block !important;
+
+    color: #eef9ff !important;
+
+    font-size: 11px !important;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    white-space: normal;
+}
+
+
+/* =========================================================
+   ACTIVE - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .nav-item.active .nav-link {
+    background-color:
+        rgba(225, 29, 46, 0.15) !important;
+
+    color: #ffffff !important;
+
+    border-left: none !important;
+
+}
+
+
+.sidebar.toggled .nav-item.active .nav-link i {
+    color: #ffffff !important;
+}
+
+
+.sidebar.toggled .nav-item.active .nav-link span {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   HOVER - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .nav-item .nav-link:hover {
+    background-color:
+        rgba(255, 255, 255, 0.06) !important;
+
+    color: #ffffff !important;
+
+    transform: none !important;
+}
+
+
+.sidebar.toggled .nav-item .nav-link:hover i {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   COLLAPSE ARROW - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .nav-link[data-toggle="collapse"]::after {
+    display: none !important;
+}
+
+
+/* =========================================================
+   COLLAPSE MENU - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .collapse {
+    position: absolute;
+
+    left: 100%;
+
+    top: 0;
+
+    min-width: 190px;
+
+    z-index: 999;
+}
+
+
+.sidebar.toggled .collapse-inner {
+    margin: 0 !important;
+}
+
+
+/* =========================================================
+   DIVIDER - COLLAPSED
+========================================================= */
+
+.sidebar.toggled .sidebar-divider {
+    margin-left: 15px;
+
+    margin-right: 15px;
+}
+
+
+/* =========================================================
+   TOGGLER - COLLAPSED
+========================================================= */
+
+.sidebar.toggled #sidebarToggle {
+    width: 40px !important;
+
+    height: 28px !important;
+}
+
+
+/* =========================================================
+   TOPBAR
+========================================================= */
+
+.topbar {
+    height: 76px;
+
+    background:
+        rgba(255, 255, 255, 0.96) !important;
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid var(--border);
+
+    box-shadow:
+        0 4px 22px rgba(7, 21, 42, 0.05);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* Top accent */
+
+.topbar::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--navy) 0%,
+            var(--navy) 72%,
+            var(--red) 72%,
+            var(--red) 100%
+        );
+}
+
+
+.topbar .nav-link {
+    color: var(--navy) !important;
+
+    font-weight: 700;
+}
+
+
+.topbar .nav-link:hover {
+    color: var(--red) !important;
+}
+
+
+.topbar-divider {
+    border-left:
+        1px solid #dfe5ed;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.container-fluid {
+    padding: 32px;
+}
+
+
+/* Dashboard title */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--navy);
+}
+
+
+h1 {
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+    background: var(--card) !important;
+
+    border:
+        1px solid rgba(11, 31, 58, 0.045) !important;
+
+    border-radius: 16px !important;
+
+    box-shadow: var(--shadow-md) !important;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.card:hover {
+    transform: translateY(-1px);
+
+    box-shadow: var(--shadow-lg) !important;
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.card-header {
+    background: #ffffff !important;
+
+    border-bottom:
+        1px solid var(--border) !important;
+
+    padding: 20px 24px;
+
+    position: relative;
+}
+
+
+/* Red accent */
+
+.card-header::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--red),
+            #ff4657
+        );
+}
+
+
+.card-header h6,
+.card-header h5,
+.card-header h4 {
+    color: var(--navy) !important;
+
+    font-size: 17px;
+
+    font-weight: 800;
+
+    margin: 0;
+}
+
+
+/* Remove purple from card heading links */
+
+.card-header a,
+.card-header .text-primary {
+    color: var(--navy) !important;
+}
+
+
+.card-header a:hover {
+    color: var(--red) !important;
+}
+
+
+.card-body {
+    padding: 25px;
+}
+
+
+/* =========================================================
+   STATISTIC CARD
+========================================================= */
+
+.card .text-primary {
+    color: var(--navy) !important;
+}
+
+.card .text-success {
+    color: #059669 !important;
+}
+
+.card .text-danger {
+    color: var(--red) !important;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+label {
+    color: var(--navy);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.form-control,
+.custom-select {
+    min-height: 44px;
+
+    border:
+        1px solid #dce3ec !important;
+
+    border-radius: 9px !important;
+
+    padding: 10px 13px;
+
+    color: #374151;
+
+    background: #ffffff !important;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.form-control:hover,
+.custom-select:hover {
+    border-color: #b9c5d5 !important;
+}
+
+
+.form-control:focus,
+.custom-select:focus {
+    border-color: var(--blue) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10) !important;
+
+    outline: none;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    color: var(--navy);
+    border-radius: 9px !important;
+
+    font-weight: 700;
+
+    padding: 9px 17px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* Primary */
+
+.btn-primary {
+    background: var(--navy) !important;
+
+    border-color: var(--navy) !important;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 4px 10px rgba(11, 31, 58, 0.15);
+}
+
+
+.btn-primary:hover {
+    background: var(--navy-light) !important;
+
+    border-color: var(--navy-light) !important;
+
+    box-shadow:
+        0 7px 16px rgba(11, 31, 58, 0.20);
+}
+
+
+/* Danger */
+
+.btn-danger {
+    background: var(--red) !important;
+
+    border-color: var(--red) !important;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 4px 10px rgba(225, 29, 46, 0.15);
+}
+
+
+.btn-danger:hover {
+    background: var(--red-dark) !important;
+
+    border-color: var(--red-dark) !important;
+
+    box-shadow:
+        0 7px 16px rgba(225, 29, 46, 0.20);
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.table-responsive {
+    border-radius: 12px;
+
+    overflow-x: auto;
+}
+
+
+.table {
+    margin-bottom: 0;
+
+    color: #334155;
+}
+
+
+.table thead th {
+    background:
+        linear-gradient(
+            90deg,
+            #f7f9fc,
+            #ffffff
+        ) !important;
+
+    color: #536783 !important;
+
+    border-top: none !important;
+
+    border-bottom:
+        2px solid var(--border) !important;
+
+    padding: 15px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+.table tbody td {
+    padding: 14px 15px;
+
+    vertical-align: middle;
+
+    border-color: #edf0f5 !important;
+}
+
+
+.table tbody tr {
+    transition:
+        background 0.2s ease;
+}
+
+
+.table tbody tr:hover {
+    background:
+        #f8faff !important;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.badge {
+    border-radius: 20px;
+
+    padding: 6px 10px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.badge-primary {
+    background:
+        rgba(37, 99, 235, 0.10) !important;
+
+    color: var(--blue) !important;
+}
+
+
+.badge-danger {
+    background:
+        rgba(225, 29, 46, 0.10) !important;
+
+    color: var(--red) !important;
+}
+
+
+.badge-success {
+    background:
+        rgba(16, 185, 129, 0.10) !important;
+
+    color: #059669 !important;
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.alert {
+    border: none;
+
+    border-radius: 11px;
+
+    box-shadow: var(--shadow-sm);
+}
+
+
+/* =========================================================
+   DROPDOWN
+========================================================= */
+
+.dropdown-menu {
+    border:
+        1px solid var(--border) !important;
+
+    border-radius: 12px !important;
+
+    box-shadow:
+        0 12px 30px rgba(11, 31, 58, 0.12);
+
+    padding: 8px;
+}
+
+
+.dropdown-item {
+    border-radius: 8px;
+
+    padding: 9px 12px;
+
+    font-size: 13px;
+
+    transition: 0.2s ease;
+}
+
+
+.dropdown-item:hover {
+    background: #f3f6fb !important;
+
+    color: var(--navy) !important;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal-content {
+    border: none;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 20px 60px rgba(7, 21, 42, 0.20);
+}
+
+
+.modal-header {
+    border-bottom:
+        1px solid var(--border);
+}
+
+
+.modal-title {
+    color: var(--navy) !important;
+
+    font-weight: 800;
+}
+
+
+.modal-footer {
+    border-top:
+        1px solid var(--border);
+}
+
+
+/* =========================================================
+   SWITCH
+========================================================= */
+
+.switch {
+    position: relative;
+
+    display: inline-block;
+
+    width: 52px;
+    height: 28px;
+}
+
+
+.switch input {
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+}
+
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    cursor: pointer;
+
+    background: #cbd5e1;
+
+    transition: 0.3s;
+
+    border-radius: 30px;
+}
+
+
+.slider:before {
+    position: absolute;
+
+    content: "";
+
+    width: 22px;
+    height: 22px;
+
+    left: 3px;
+    bottom: 3px;
+
+    background: #ffffff;
+
+    transition: 0.3s;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+
+.switch input:checked + .slider {
+    background: var(--red);
+}
+
+
+.switch input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer.sticky-footer {
+    background: #ffffff !important;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+footer .copyright {
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #eef2f7;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #aab6c7;
+
+    border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--navy);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .container-fluid {
+        padding: 20px 15px;
+    }
+
+    .card-body {
+        padding: 18px;
+    }
+
+    .card-header {
+        padding: 17px 20px;
+    }
+
+    .topbar {
+        height: 68px;
+    }
+
+    .sidebar .sidebar-brand-text {
+        font-size: 13px;
+    }
+
+    .table {
+        min-width: 650px;
+    }
+}

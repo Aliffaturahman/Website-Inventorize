@@ -1,0 +1,444 @@
+/* =========================================================
+   STOK KAIN FORM
+========================================================= */
+
+.stok-card {
+    border: none !important;
+    border-radius: 14px !important;
+    overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.stok-form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.stok-form-header h4 {
+    margin: 0 0 5px;
+
+    color: #252b36;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.stok-form-header p {
+    margin: 0;
+
+    color: #8a96a8;
+
+    font-size: 13px;
+}
+
+.stok-header-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: rgba(29, 78, 216, 0.08);
+    color: var(--navy);
+
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.stok-section {
+    padding: 22px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid #e7ebf1;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+.stok-section-title {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 18px;
+}
+
+.stok-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: rgba(29, 78, 216, 0.08);
+
+    color: var(--navy);
+}
+
+.stok-section-title h5 {
+    margin: 0 0 3px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    color: var(--navy);
+}
+
+.stok-section-title p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #929dac;
+}
+
+
+/* =========================================================
+   DATA MODE
+========================================================= */
+
+.data-mode-wrapper {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.data-mode {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #dfe5ed;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #667085;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.data-mode > i {
+    font-size: 18px;
+
+    color: #9aa6b6;
+}
+
+.data-mode div {
+    flex: 1;
+}
+
+.data-mode strong {
+    display: block;
+
+    color: #344054;
+
+    font-size: 13px;
+
+    margin-bottom: 2px;
+}
+
+.data-mode small {
+    display: block;
+
+    color: #98a2b3;
+
+    font-size: 10px;
+}
+
+.data-mode .mode-check {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #d5dce5;
+
+    color: transparent;
+
+    font-size: 9px;
+}
+
+.data-mode:hover {
+    border-color: #9bbcf5;
+
+    background: #f8fbff;
+
+    transform: translateY(-1px);
+}
+
+.data-mode.active {
+    border-color: var(--blue);
+
+    background: rgba(29, 78, 216, 0.045);
+
+    box-shadow:
+        0 0 0 2px rgba(29, 78, 216, 0.08);
+}
+
+.data-mode.active > i {
+    color: var(--blue);
+}
+
+.data-mode.active strong {
+    color: var(--blue);
+}
+
+.data-mode.active .mode-check {
+    background: var(--blue);
+
+    border-color: var(--blue);
+
+    color: white;
+}
+
+
+/* =========================================================
+   DATA FORM
+========================================================= */
+
+.data-form {
+    animation: stokFadeIn 0.2s ease;
+}
+
+.data-form label {
+    display: block;
+
+    color: #344054;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+.data-form .form-control {
+    min-height: 46px;
+}
+
+
+/* =========================================================
+   ROLL INPUT
+========================================================= */
+
+.roll-input-wrapper {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 14px;
+
+    margin-top: 12px;
+
+    border: 1px solid #e7ebf1;
+
+    border-radius: 10px;
+
+    background: #fafbfd;
+}
+
+.roll-number {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(29, 78, 216, 0.09);
+
+    color: var(--blue);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+.roll-input-content {
+    flex: 1;
+}
+
+.roll-input-content label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #344054;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+.roll-input-content .form-control {
+    min-height: 42px;
+}
+
+
+/* =========================================================
+   FOOTER BUTTONS
+========================================================= */
+
+.stok-form-footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    margin-top: 10px;
+
+    border-top: 1px solid var(--border);
+}
+
+.stok-btn-back,
+.stok-btn-next {
+    min-width: 105px;
+
+    min-height: 42px;
+
+    border-radius: 8px !important;
+
+    font-weight: 700;
+}
+
+.stok-btn-next {
+    box-shadow:
+        0 5px 12px rgba(29, 78, 216, 0.18);
+}
+
+
+/* =========================================================
+   ALERT
+========================================================= */
+
+.stok-alert {
+    margin-top: 20px;
+
+    border-left: 4px solid var(--red);
+
+    border-radius: 8px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+@keyframes stokFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .data-mode-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .stok-step-line {
+        width: 40px;
+        margin: 0 8px;
+    }
+
+    .stok-step small {
+        display: none;
+    }
+
+    .stok-form-header h4 {
+        font-size: 19px;
+    }
+
+    .stok-section {
+        padding: 16px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .stok-step strong {
+        font-size: 11px;
+    }
+
+    .stok-step-number {
+        width: 32px;
+        height: 32px;
+    }
+
+    .stok-form-footer {
+        gap: 10px;
+    }
+
+    .stok-btn-back,
+    .stok-btn-next {
+        min-width: 90px;
+    }
+
+}
