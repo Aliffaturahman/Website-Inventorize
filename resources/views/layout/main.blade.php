@@ -15,7 +15,7 @@
     <link href="../../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
-    <link href="../../css/ruang-admin.min.css" rel="stylesheet">
+    <link href="../../css/ruang-admin.css" rel="stylesheet">
     
     <!-- Select2 -->
     <link href="../../vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
@@ -73,8 +73,15 @@
                     request()->url() === route('transaksi.store') ||
                     request()->url() === route('tinta.store') ||
                     request()->url() === route('stok_kain.store') ||
+                    request()->url() === route('kain.store') ||
+                    request()->url() === route('produksi.store') ||
+                    request()->url() === route('roll.store') ||
                     request()->url() === route('stok_kertas.store') ||
-                    request()->url() === route('stok_tinta.store');
+                    request()->url() === route('berat.store') ||
+                    request()->url() === route('kertas.store') ||
+                    request()->url() === route('stok_tinta.store') ||
+                    request()->url() === route('warna.store') ||
+                    request()->url() === route('volume.store');
             @endphp
 
             <!-- Forms -->
@@ -118,15 +125,47 @@
                             href="{{ route('stok_kain.store') }}">
                             Stok Kain
                         </a>
+                        <a class="collapse-item {{ request()->url() === route('kain.store') ? 'active' : '' }}"
+                            href="{{ route('kain.store') }}">
+                            Kain
+                        </a>
+                        <a class="collapse-item {{ request()->url() === route('produksi.store') ? 'active' : '' }}"
+                            href="{{ route('produksi.store') }}">
+                            Produksi
+                        </a>
+                        <a class="collapse-item {{ request()->url() === route('roll.store') ? 'active' : '' }}"
+                            href="{{ route('roll.store') }}">
+                            Roll
+                        </a>
+
+                        <hr class="sidebar-divider">
 
                         <a class="collapse-item {{ request()->url() === route('stok_kertas.store') ? 'active' : '' }}"
                             href="{{ route('stok_kertas.store') }}">
                             Stok Kertas
                         </a>
+                        <a class="collapse-item {{ request()->url() === route('kertas.store') ? 'active' : '' }}"
+                            href="{{ route('kertas.store') }}">
+                            Kertas
+                        </a>
+                        <a class="collapse-item {{ request()->url() === route('berat.store') ? 'active' : '' }}"
+                            href="{{ route('berat.store') }}">
+                            Berat
+                        </a>
+
+                        <hr class="sidebar-divider">
 
                         <a class="collapse-item {{ request()->url() === route('stok_tinta.store') ? 'active' : '' }}"
                             href="{{ route('stok_tinta.store') }}">
                             Stok Tinta
+                        </a>
+                        <a class="collapse-item {{ request()->url() === route('warna.store') ? 'active' : '' }}"
+                            href="{{ route('warna.store') }}">
+                            Warna
+                        </a>
+                        <a class="collapse-item {{ request()->url() === route('volume.store') ? 'active' : '' }}"
+                            href="{{ route('volume.store') }}">
+                            Volume
                         </a>
 
                     </div>
@@ -243,13 +282,13 @@
             </div>
         </li>
 
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
 
-            <!-- Sidebar Toggler -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded border-0" id="sidebarToggle"></button>
-            </div>
+        <!-- Sidebar Toggler -->
+        <div class="text-center d-none d-md-inline" id="sidebarToggleWrapper">
+            <button class="rounded border-0" id="sidebarToggle"></button>
+        </div>
 
         </ul>
         <!-- End of Sidebar -->
@@ -276,7 +315,9 @@
                 </nav>
                 <!-- Topbar -->
                 {{-- BATAS AWAL --}}
+
                 @yield('content')
+                
                 {{-- BATAS AKHIR --}}
                 <!-- Modal Logout -->
                 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout" aria-hidden="true">

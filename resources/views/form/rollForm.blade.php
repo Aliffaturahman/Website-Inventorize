@@ -41,7 +41,6 @@
             </div>
         </div>
     </div>
-</div>
 @endsection
 @section('jsCode')
 <script>

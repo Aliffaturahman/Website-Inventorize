@@ -58,7 +58,7 @@
               <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ $transaksi }}</div>
             </div>
             <div class="col-auto">
-              <i class="fas fa-shopping-cart fa-2x text-info"></i>
+              <i class="fas fa-shopping-cart fa-2x text-warning"></i>
             </div>
           </div>
         </div>
@@ -81,11 +81,11 @@
       </div>
     </div>
     <!-- TRANSAKSI -->
-    <div class="col-xl-12 col-lg-7 mb-4">
+    <div class="col-xl-12 mb-4">
       <div class="card">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-0 font-weight-bold text-primary">Transaksi Terbaru</h6>
-          <a class="m-0 float-right btn btn-danger btn-sm" href="{{ route('table.show', ['link' => 'Transaksi']) }}">View More<i
+          <a class="m-0 float-right btn btn-danger btn-sm" href="{{ route('table.show', ['link' => 'Transaksi']) }}">View More <i
               class="fas fa-chevron-right"></i></a>
         </div>
         <div class="table-responsive">
@@ -126,7 +126,7 @@
       </div>
     </div>
     <!-- TRANSAKSI -->
-    <div class="col-xl-12 col-lg-7 mb-4">
+    <div class="col-xl-12 mb-4">
       <div class="card">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-0 font-weight-bold text-primary">Riwayat Terbaru</h6>

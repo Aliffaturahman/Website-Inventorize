@@ -1,15 +1,25 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\TableController;
-use App\Http\Controllers\TintaController;
-use App\Http\Controllers\StokKainController;
-use App\Http\Controllers\StokTintaController;
-use App\Http\Controllers\StokKertasController;
+
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\TintaController;
+
+use App\Http\Controllers\StokKainController;
+use App\Http\Controllers\KainController;
+use App\Http\Controllers\ProduksiController;
 use App\Http\Controllers\RollController;
-use App\Http\Controllers\DashboardController;
+
+use App\Http\Controllers\StokTintaController;
+use App\Http\Controllers\KertasController;
+use App\Http\Controllers\BeratController;
+
+use App\Http\Controllers\StokKertasController;
+use App\Http\Controllers\WarnaController;
+use App\Http\Controllers\VolumeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,19 +56,62 @@ Route::group([
         Route::get('/form/{slug}', [FormController::class, 'index'])->middleware('can:role, "admin"');
         Route::get('/get-rolls', [RollController::class, 'getRolls'])->name('get-rolls')->middleware('can:role, "admin"');
         Route::get('/get-panjang', [StokKertasController::class, 'getPanjang'])->name('get-panjang')->middleware('can:role, "admin"');
+        
         // TABLE
         Route::get('/table/{link}', [TableController::class, 'show'])->middleware('can:role,"admin","operator"')->name('table.show');
+
         // POST
-        Route::post('/form/Stok_Kain', [StokKainController::class, 'store'])->name('stok_kain.store')->middleware('can:role,"admin"');
-        Route::post('/form/Stok_Kertas', [StokKertasController::class, 'store'])->name('stok_kertas.store')->middleware('can:role,"admin"');
-        Route::post('/form/Stok_Tinta', [StokTintaController::class, 'store'])->name('stok_tinta.store')->middleware('can:role,"admin"');
-        Route::post('/form/Tinta', [TintaController::class, 'store'])->name('tinta.store')->middleware('can:role,"admin"');
-        Route::post('/form/Transaksi', [TransaksiController::class, 'store'])->name('transaksi.store')->middleware('can:role,"admin"');
+        Route::post('/form/Tinta', [TintaController::class, 'store'])
+            ->name('tinta.store')
+            ->middleware('can:role,"admin"');
+        Route::post('/form/Transaksi', [TransaksiController::class, 'store'])
+            ->name('transaksi.store')
+            ->middleware('can:role,"admin"');
+        
+        Route::post('/form/Stok_Kain', [StokKainController::class, 'store'])
+            ->name('stok_kain.store')
+            ->middleware('can:role,"admin"');
+        Route::post('/form/Kain', [KainController::class, 'store'])
+            ->name('kain.store')
+            ->middleware('can:role,"admin"');
+        Route::post('/form/Produksi', [ProduksiController::class, 'store'])
+            ->name('produksi.store')
+            ->middleware('can:role,"admin"');
+        Route::post('/form/Roll', [RollController::class, 'store'])
+            ->name('roll.store')
+            ->middleware('can:role,"admin"');
+
+        Route::post('/form/Stok_Kertas', [StokKertasController::class, 'store'])
+            ->name('stok_kertas.store')
+            ->middleware('can:role,"admin"');
+        Route::post('/form/Kertas', [KertasController::class, 'store'])
+            ->name('kertas.store')
+            ->middleware('can:role,"admin"');
+        Route::post('/form/Berat', [BeratController::class, 'store'])
+            ->name('berat.store')
+            ->middleware('can:role,"admin"');
+
+        Route::post('/form/Stok_Tinta', [StokTintaController::class, 'store'])
+            ->name('stok_tinta.store')
+            ->middleware('can:role,"admin"');
+        Route::post('/form/Warna', [WarnaController::class, 'store'])
+            ->name('warna.store')
+            ->middleware('can:role,"admin"');
+        Route::post('/form/Volume', [VolumeController::class, 'store'])
+            ->name('volume.store')
+            ->middleware('can:role,"admin"');
     });
 });
 Route::get('/', function () {
     return redirect()->route('admin.login');
 });
+// Route::get('/', function () {
+//     return 'Laravel OK';
+// });
+
+
+
+
 // Route::get('/', function () {
 //     return view('/page/home');
 // });
